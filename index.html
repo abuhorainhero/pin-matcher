@@ -77,10 +77,14 @@
             if (randomValue != totalInputNumber){
                 document.getElementById("notifyError").style.display = "block";
                 document.getElementById("notifySuccess").style.display = "none";
+                document.getElementById("generateInput").value = "";
+                document.getElementById("numberInput").value = "";
             }
             else if (randomValue == totalInputNumber){
                 document.getElementById("notifySuccess").style.display = "block";
                 document.getElementById("notifyError").style.display = "none";
+                document.getElementById("generateInput").value = "";
+                document.getElementById("numberInput").value = "";
             }
         })
         
