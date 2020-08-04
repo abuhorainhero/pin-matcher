@@ -76,9 +76,11 @@
         document.getElementById("submitBtn").addEventListener("click", function(){
             if (randomValue != totalInputNumber){
                 document.getElementById("notifyError").style.display = "block";
+                document.getElementById("notifySuccess").style.display = "none";
             }
             else if (randomValue == totalInputNumber){
                 document.getElementById("notifySuccess").style.display = "block";
+                document.getElementById("notifyError").style.display = "none";
             }
         })
         
