@@ -37,7 +37,7 @@
                               <div onclick="number(3)" class="button">3</div>
                             </div>
                             <div class="calc-button-row">
-                                <div class="button"><</div>
+                                <div id="remove" class="button"><</div>
                                 <div onclick="number(0)" class="button">0</div>
                                 <div id="clear" class="button">C</div>
                             </div>
@@ -68,7 +68,12 @@
             document.getElementById("numberInput").value = document.getElementById("numberInput").value + num;
             totalInputNumber = document.getElementById("numberInput").value;
         }
-
+        
+        document.getElementById("remove").addEventListener("click", function(){
+            let removeNumber = document.getElementById("numberInput").value;
+            let removeValue = removeNumber.slice(0, -1);
+            document.getElementById("numberInput").value = removeValue;
+        })
         document.getElementById("clear").addEventListener("click", function(){
             document.getElementById("numberInput").value = "";
         })
